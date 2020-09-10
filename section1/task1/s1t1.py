@@ -3,7 +3,7 @@
 import pandas as pd
 import requests
 import datetime
-url = 'https://min-api.cryptocompare.com/data/v2/histohour?fsym=BTC&tsym=USDT&e=binance&limit=2000&toTs{1585699200}'
+url = 'https://min-api.cryptocompare.com/data/v2/histohour?fsym=BTC&tsym=USDT&e=binance&limit=2000&toTs=1585699200'
 f = requests.get(url)
 ipdata = f.json()
 df = pd.DataFrame(ipdata['Data']['Data'])
