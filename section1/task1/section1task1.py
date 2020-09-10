@@ -33,7 +33,7 @@ def get_data(fsym, tsym, start_time, end_time, e):
     # Retrieve the data backwards
     while date>start_time:
         # Modify the URL using the given parameters
-        url = url+"fsym="+fsym+"&tsym="+tsym+"&e="+e+'&limit=2000'+'toTs{'+str(date)+'}'
+        url = url+"fsym="+fsym+"&tsym="+tsym+"&e="+e+'&limit=2000'+'toTs='+str(date)
         f = requests.get(url)
         ipdata = f.json()
         df = pd.DataFrame(ipdata['Data']['Data'])
